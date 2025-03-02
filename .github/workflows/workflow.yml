@@ -46,4 +46,5 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           name: binary
-          path: ${{ env.WORKDIR }}/build/bin
+          working-directory: ${{ env.WORKDIR }}
+          path: /build/bin/solver

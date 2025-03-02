@@ -41,3 +41,9 @@ jobs:
       - name: Test project
         working-directory: ${{ env.WORKDIR }}
         run: ctest --test-dir build
+
+      # Artifact generation
+      - uses: actions/upload-artifact@v4
+        with:
+          name: binary
+          path: ${{ env.WORKDIR }}/build/bin/solver

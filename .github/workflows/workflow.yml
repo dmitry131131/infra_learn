@@ -36,7 +36,7 @@ jobs:
 
       - name: Build project
         working-directory: ${{ env.WORKDIR }}
-        run: cmake --build .
+        run: cmake --build build
 
       - name: Test project
         working-directory: ${{ env.WORKDIR }}
